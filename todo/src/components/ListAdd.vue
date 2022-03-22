@@ -22,11 +22,11 @@ export default {
             }
         }
     },
-    // mounted() {
-    //     this.emitter.on('listEdit', (memo, index) => {
-    //         console.log(memo, index);
-    //     })
-    // },
+    mounted() {
+        this.emitter.on('listEdit', (memo) => {
+            console.log(memo);
+        })
+    },
 
 }
 </script>

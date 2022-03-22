@@ -20,6 +20,7 @@
                     @click="$emit('listDelete', index)"
                 >제거</button>
                 <button
+                    @click="listEdit(list.memo)"
                     v-if="list.status === 'create'"
                 >수정</button>
             </li>
@@ -35,12 +36,12 @@ export default {
 
         }
     },
-    // methods:{
-    //     listEdit(memo, index){
-    //         this.emitter.emit("listEdit", memo, index)
-    //     }
-    //
-    // }
+    methods:{
+        listEdit(memo){
+            this.emitter.emit("listEdit", memo)
+        }
+
+    }
 }
 </script>
 <style>
